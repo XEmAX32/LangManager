@@ -41,23 +41,20 @@ class langManager {
     }
 
     translate(options) {
-      //Still working on this
-      /*if(options !== undefined) {
+      if(options !== undefined) {
 
-        $.each(options, key => {
+        options.forEach(key => {
           if(key in this.data) {
             $('[content=' + key + ']').html(this.data[key]);
           } else {
             throw "Error: content " + key + " doesn't exists";
           }
-        })
+        });
       } else {
         $.each(this.data, (key, val) => {
           $('[content=' + key + ']').html(val);
         });
-      }*/
-      $.each(this.data, (key, val) => {
-        $('[content=' + key + ']').html(val);
-      });
+      }
+
     }
 }
